@@ -1,0 +1,90 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Título */
+.container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+}
+
+button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.tabelas-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espaço entre as tabelas */
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
