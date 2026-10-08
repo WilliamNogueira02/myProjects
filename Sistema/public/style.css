@@ -1,0 +1,159 @@
+/* ==========================================================
+   Trabalhe Conosco - Mercado
+   Paleta:
+   verde folha  #1F6B3A  (identidade, destaques)
+   verde escuro #14391F  (títulos)
+   amarelo      #FFD43B  (etiqueta de preço: botão e foco)
+   fundo        #EEF3EC  (verde bem clarinho)
+   borda campo  #C9D4C5
+   ========================================================== */
+
+
+/* 1. Regra geral: faz padding e borda contarem DENTRO da largura.
+      Sem isso, width: 100% + padding faz o campo vazar do formulário. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* 2. Página */
+body {
+    margin: 0;
+    padding: 24px 16px;
+    background-color: #EEF3EC;
+    color: #1B2A1F;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+
+/* 3. Título */
+h1 {
+    max-width: 560px;
+    margin: 0 auto 16px;
+    color: #14391F;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+/* 4. O formulário vira um "cartão" branco centralizado */
+form {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-top: 8px solid #1F6B3A;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(20, 57, 31, 0.12);
+}
+
+
+/* 5. Rótulos: um por linha, com espaço em cima */
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #14391F;
+}
+
+/* O primeiro rótulo não precisa de espaço extra em cima */
+label:first-of-type {
+    margin-top: 0;
+}
+
+
+/* 6. Campos: um por linha, ocupando toda a largura */
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #FFFFFF;
+    color: #1B2A1F;
+    border: 2px solid #C9D4C5;
+    border-radius: 8px;
+    /* 1rem (16px) evita que o celular dê zoom ao tocar no campo */
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.15s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #6B7A6E;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="file"] {
+    background-color: #F6F8F5;
+    cursor: pointer;
+}
+
+
+/* 7. Foco: quando o candidato clica/toca no campo.
+      Importante para quem navega pelo teclado. */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #FFD43B;
+    border-color: #1F6B3A;
+}
+
+
+/* 8. Botão de enviar: amarelo, como uma etiqueta de preço */
+button {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px;
+    background-color: #FFD43B;
+    color: #14391F;
+    border: 2px solid #14391F;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+button:hover {
+    background-color: #F5C400;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:focus-visible {
+    outline: 3px solid #1F6B3A;
+    outline-offset: 2px;
+}
+
+
+/* 9. Telas maiores (computador): mais respiro.
+      O projeto foi pensado primeiro para celular, e aqui só ampliamos. */
+@media (min-width: 600px) {
+    body {
+        padding: 48px 16px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    form {
+        padding: 32px;
+    }
+}
