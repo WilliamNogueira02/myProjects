@@ -1,0 +1,140 @@
+* {box-sizing:border-box}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f4f4f5;
+    color: #18181b;
+    line-height: 1.5;
+}
+
+main{
+    width: min(640px, calc(100% - 32px));
+    margin: 40px auto;
+}
+
+h1{
+    margin: 0 0 8px; 
+    font-size: 2rem;
+}
+
+.descricao {
+    margin: 0 0 24px;
+    color: #52525b;
+}
+
+form, section{
+    background: #fff;
+    border: 1px solid #e4e4e7;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input, textarea{
+    font: inherit;
+    font-weight: 400;
+    padding: 12px;
+    border: 1px solid #d4d4d8;
+    border-radius: 8px;
+}
+
+input:focus, textarea:focus{
+    outline: 2px solid #18181b;
+    border-color: #18181b;
+}
+
+.linha {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.botao-arquivo input[type="file"]{
+    display: none;
+}
+
+.botao-arquivo{
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.botao-arquivo:hover{
+    background-color: #2980b9;
+}
+
+button{
+    width: 100%;
+    min-height: 44px;
+    border: 0;
+    border-radius: 8px;
+    background: #18181b;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #3f3f46;
+}
+
+#mensagem{
+    margin: 12px 0 0;
+    color: #166543
+}
+
+#mensagem.erro {
+    color: #b91c1c;
+}
+
+.excluir {
+    width: auto;
+    min-height: 0;
+    padding: 6px 12px;
+    background: #b91c1c
+}
+
+section {
+    margin-top: 24px;
+}
+
+li {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editar {
+    width: auto;
+    min-height: 0;
+    padding: 6px 12px;
+    background: #b91c1c
+}
+
+.vazio{
+    color: #71717a;
+}
+
+@media (max-width: 600px){
+    .linha {
+        grid-template-columns: 1fr;
+    }
+}

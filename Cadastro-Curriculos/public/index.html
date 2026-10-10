@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trabalhe Conosco</title>
+</head>
+<body>
+    <main>
+        <h1>Cadastre seu Currículo</h1>
+        <p class="descricao">Preencha o formulário abaixo para enviar seu currículo:</p>
+
+        <form id="formulario-cadastro">
+            
+            <label>
+                Nome:
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
+            </label>
+
+            <div class="linha">
+                <label>
+                    E-mail:
+                    <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
+                </label>
+
+                <label>
+                    Telefone/WhatsApp:
+                    <input type="tel" name="telefone" id="telefone" placeholder="Digite seu número de telefone" required>
+                </label>
+            </div>
+
+            <label>
+                Endereço:
+                <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço completo" required>
+            </label>
+
+            <label>
+                Objetivo:
+                <textarea name="objetivo" id="objetivo" placeholder="Digite o seu objetivo profissional"></textarea>
+            </label>
+
+            <label>
+                Formação:
+                <textarea name="formacao" id="formacao" rows="3" placeholder="Digite sua formação acadêmica" required></textarea>
+            </label>
+
+            <label>
+                Experiência:
+                <textarea name="experiencia" id="experiencia" placeholder="Digite sua experiência profissional" rows="4"></textarea>
+            </label>
+
+            <label>
+                Habilidades:
+                <input type="text" name="habilidades" id="habilidades" placeholder="Digite as suas habilidades para o cargo">
+            </label>
+            
+            <label class="botao-arquivo">
+                Selecionar Currículo
+                <input type="file" name="curriculo" id="curriculo" accept=".pdf,.doc,.docx">
+            </label>
+
+            <button type="submit" id="botaoEnviar">Enviar Currículo</button>
+            <p id="mensagem" hidden></p>
+        </form>
+
+        <section>
+            <h2>Currículos já enviados</h2>
+            <ul id="lista"></ul>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
